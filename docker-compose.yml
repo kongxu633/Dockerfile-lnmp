@@ -10,9 +10,11 @@ nginx:
 php:
   build: ./php
   ports:
+    - "8000:8000"
     - "9000:9000"
   links:
     - "mysql"
+    - "redis"
   volumes:
     - /var/www:/var/www
 
@@ -21,6 +23,11 @@ mysql:
   ports:
     - "3306:3306"
   volumes:
-    - /data/www/mysql:/var/lib/mysql
+    - ~/dvwa/data/mysql:/var/lib/mysql
   environment:
     MYSQL_ROOT_PASSWORD: 123456
+
+redis:
+  build: ./redis
+  ports:
+    - "6379:6379"
