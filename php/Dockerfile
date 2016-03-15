@@ -2,7 +2,7 @@ FROM php:5.6-fpm
 
 # Install env
 ADD sources.list /etc/apt/sources.list
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
 	git \
     libmcrypt-dev \
     libfreetype6-dev \
