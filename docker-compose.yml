@@ -23,7 +23,7 @@ mysql:
   ports:
     - "3306:3306"
   volumes:
-    - ~/dvwa/data/mysql:/var/lib/mysql
+    - /var/www/data/mysql:/var/lib/mysql
   environment:
     MYSQL_ROOT_PASSWORD: 123456
 
