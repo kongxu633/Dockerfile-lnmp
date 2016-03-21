@@ -36,8 +36,9 @@ ADD php.ini /usr/local/etc/php/php.ini
 ADD php-fpm.conf /usr/local/etc/php-fpm.conf
 
 #Composer
-ADD composer.phar /usr/local/bin/composer
-RUN chmod 755 /usr/local/bin/composer
+RUN curl -sS https://getcomposer.org/installer | php \
+    && mv composer.phar /usr/local/bin/composer \
+    && chmod 755 /usr/local/bin/composer
 
 WORKDIR /var/www
 
