@@ -25,8 +25,6 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && chmod 755 /usr/local/bin/composer
 
-RUN mkdir -p /var/www && mkdir -p /var/www/log && mkdir -p /var/www/log/php
-RUN chown -R www-data.www-data /var/www /var/www/log
 
 WORKDIR /var/www
 
