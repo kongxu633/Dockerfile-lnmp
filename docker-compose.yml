@@ -10,7 +10,7 @@ nginx:
 php:
   build: ./php
   ports:
-    - "8000:8000"
+    - "9000:9000"
   links:
     - "mysql"
   volumes:
