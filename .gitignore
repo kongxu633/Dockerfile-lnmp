@@ -1,5 +1,1 @@
-*.phar
-php/*.tgz
-gearman/*.tgz
-elasticsearch/*.zip
 .idea
